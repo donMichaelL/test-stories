@@ -14,3 +14,10 @@ local.properties
 keystore.properties
 .sentryclirc
 *.b64
+
+# Ruby / fastlane
+/vendor/
+/.bundle/
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/play-store-key.json

@@ -1,0 +1,1 @@
+One-line hook for Stories — max 80 characters.

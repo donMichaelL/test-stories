@@ -1,0 +1,7 @@
+Replace this with your full Google Play description for Stories (max 4000 characters).
+
+Tips:
+• Lead with the core benefit in the first two lines (that's what shows above the fold).
+• Use emoji section headers and bullet lists — they scan well on Play.
+• Separate FREE features from PRO (one-time purchase / no subscription) clearly.
+• Close with a privacy line ("No ads, no tracking") if it's true.
