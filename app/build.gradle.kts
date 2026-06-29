@@ -17,9 +17,7 @@ val keystoreProperties = Properties().apply {
 android {
     namespace = "app.llcloud.stories"
     compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
+        version = release(37)
     }
 
     signingConfigs {
@@ -101,6 +99,9 @@ dependencies {
 
     // Google Play (in-app review)
     implementation(libs.androidx.play.review.ktx)
+
+    // Crash reporting (Sentry)
+    implementation(libs.sentry.android)
 
     // Testing
     testImplementation(libs.junit)
