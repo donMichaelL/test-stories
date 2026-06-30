@@ -1,0 +1,7 @@
+#!/bin/sh
+echo "🔍 pre-commit: ktlint…"
+if ! ./gradlew ktlintCheck --console=plain; then
+    echo ""
+    echo "❌ ktlint found style violations — auto-fix with:  just format"
+    exit 1
+fi
