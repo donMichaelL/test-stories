@@ -1,10 +1,6 @@
 default:
     @just --list
 
-# one-time: enable the git pre-commit hook (ktlint gate)
-setup:
-    git config core.hooksPath .githooks
-
 # auto-format Kotlin with ktlint
 format:
     ./gradlew ktlintFormat
