@@ -1,7 +1,7 @@
 #!/bin/sh
-echo "🔍 pre-commit: ktlint…"
-if ! ./gradlew ktlintCheck --console=plain; then
+echo "🔍 pre-commit: lint + unit tests…"
+if ! ./gradlew ktlintCheck test --console=plain; then
     echo ""
-    echo "❌ ktlint found style violations — auto-fix with:  just format"
+    echo "❌ pre-commit failed — lint issues? run 'just format'. test failures? see above."
     exit 1
 fi
