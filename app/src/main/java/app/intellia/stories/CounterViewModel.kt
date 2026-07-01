@@ -1,4 +1,4 @@
-package app.llcloud.stories
+package app.intellia.stories
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

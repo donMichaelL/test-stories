@@ -1,4 +1,4 @@
-package app.llcloud.stories
+package app.intellia.stories
 
 import android.app.Application
 import io.sentry.SentryOptions

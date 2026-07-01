@@ -1,10 +1,10 @@
-package app.llcloud.stories
+package app.intellia.stories
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import app.llcloud.stories.ui.theme.StoriesTheme
+import app.intellia.stories.ui.theme.StoriesTheme
 import org.junit.Rule
 import org.junit.Test
 

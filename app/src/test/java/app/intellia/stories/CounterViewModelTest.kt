@@ -1,4 +1,4 @@
-package app.llcloud.stories
+package app.intellia.stories
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

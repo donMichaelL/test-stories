@@ -1,4 +1,4 @@
-package app.llcloud.stories.ui.theme
+package app.intellia.stories.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

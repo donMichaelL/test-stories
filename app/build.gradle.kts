@@ -17,7 +17,7 @@ val keystoreProperties =
     }
 
 android {
-    namespace = "app.llcloud.stories"
+    namespace = "app.intellia.stories"
     compileSdk {
         version = release(37)
     }
@@ -34,7 +34,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "app.llcloud.stories"
+        applicationId = "app.intellia.stories"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
