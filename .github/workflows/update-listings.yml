@@ -1,0 +1,33 @@
+name: Update Listings
+on:
+  push:
+    branches: [main]
+    paths: ['fastlane/metadata/**']
+  workflow_dispatch:
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    # Skip when the push is a release commit: the tag's Release workflow uploads
+    # listings itself, and running both races the Play review submission.
+    if: "!startsWith(github.event.head_commit.message, 'Release v')"
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ruby/setup-ruby@v1
+        with: { ruby-version: '3.2', bundler-cache: true }
+
+      - name: Create Play Store key
+        run: printenv PLAY_KEY > fastlane/play-store-key.json
+        env:
+          PLAY_KEY: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+
+      - name: Read versionCode
+        run: |
+          code=$(grep -oE 'versionCode\s*=\s*[0-9]+' app/build.gradle.kts | grep -oE '[0-9]+$')
+          echo "VERSION_CODE=$code" >> "$GITHUB_ENV"
+
+      - name: Update listings
+        run: bundle exec fastlane android update_listings
+
+      - name: Cleanup
+        if: always()
+        run: rm -f fastlane/play-store-key.json

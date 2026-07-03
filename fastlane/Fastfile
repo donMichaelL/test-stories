@@ -5,7 +5,7 @@ platform :android do
   desc "Upload metadata and screenshots to Google Play"
   lane :update_listings do
     opts = {
-      track: "production",          # KNOB: "internal" pre-launch
+      track: "internal",            # KNOB: "production" to go public
       skip_upload_apk: true,
       skip_upload_aab: true,
       skip_upload_changelogs: true,
@@ -19,16 +19,16 @@ platform :android do
     upload_to_play_store(**opts)
   end
 
-  desc "Release to production: upload AAB + metadata, submit for review"
+  desc "Release to internal testing (draft): upload AAB + metadata"
   lane :release do
     upload_to_play_store(
-      track: "production",
+      track: "internal",
       aab: "app/build/outputs/bundle/release/app-release.aab",
       skip_upload_metadata: false,
       skip_upload_changelogs: false,
       skip_upload_images: false,
       skip_upload_screenshots: false,
-      release_status: "completed"   # KNOB: "draft" for an unpublished app
+      release_status: "draft"       # KNOB: "completed" to submit for review
     )
   end
 
