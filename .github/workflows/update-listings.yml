@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: ruby/setup-ruby@v1
-        with: { ruby-version: '3.2', bundler-cache: true }
+        with: { ruby-version: '3.1', bundler-cache: true }
 
       - name: Create Play Store key
         run: printenv PLAY_KEY > fastlane/play-store-key.json
