@@ -1,0 +1,10 @@
+{
+  "name": "feature-graphic-generator",
+  "private": true,
+  "scripts": {
+    "render": "node render.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}

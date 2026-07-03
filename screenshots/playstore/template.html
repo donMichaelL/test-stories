@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .frame {
+        width: 1080px;
+        height: 1920px;
+        background: radial-gradient(circle at 30% 12%, #322a63 0%, #1b1736 55%, #120f28 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 130px 90px 0;
+      }
+      .caption {
+        color: #ffffff;
+        font-size: 66px;
+        font-weight: 800;
+        line-height: 1.12;
+        letter-spacing: -1px;
+        text-align: center;
+        max-width: 900px;
+        margin-bottom: 74px;
+      }
+      .caption .accent {
+        background: linear-gradient(90deg, #a78bfa, #f0abfc);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .phone {
+        width: 600px;
+        border-radius: 52px;
+        overflow: hidden;
+        border: 10px solid #0e0b22;
+        box-shadow: 0 40px 90px rgba(0, 0, 0, 0.5);
+      }
+      .phone img {
+        width: 100%;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame" id="frame-1">
+      <div class="caption" data-frame="1"></div>
+      <div class="phone"><img src="cropped/1-counter.png" alt="" /></div>
+    </div>
+    <div class="frame" id="frame-2">
+      <div class="caption" data-frame="2"></div>
+      <div class="phone"><img src="cropped/2-counter-7.png" alt="" /></div>
+    </div>
+
+    <script>
+      const COPY = {
+        "en-US": {
+          "1": ["Count what ", "matters."],
+          "2": ["Tap. Count. ", "Repeat."],
+        },
+      };
+      window.applyLocale = function (loc) {
+        const copy = COPY[loc] || COPY["en-US"];
+        document.querySelectorAll(".caption").forEach((el) => {
+          const parts = copy[el.dataset.frame] || [""];
+          el.innerHTML = parts[0] + (parts[1] ? '<span class="accent">' + parts[1] + "</span>" : "");
+        });
+      };
+      window.applyLocale("en-US");
+    </script>
+  </body>
+</html>

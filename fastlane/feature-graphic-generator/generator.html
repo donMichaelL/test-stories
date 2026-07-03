@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1024px;
+        height: 500px;
+        overflow: hidden;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background: radial-gradient(circle at 15% 15%, #322a63 0%, #1b1736 55%, #120f28 100%);
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+      }
+      .copy {
+        flex: 1 1 auto;
+        padding-left: 72px;
+      }
+      #pill {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #c4b5fd;
+        border: 1px solid rgba(196, 181, 253, 0.45);
+        border-radius: 999px;
+        padding: 7px 16px;
+        margin-bottom: 28px;
+      }
+      .headline {
+        font-size: 66px;
+        font-weight: 800;
+        line-height: 1.05;
+        letter-spacing: -2px;
+      }
+      #headline-accent {
+        background: linear-gradient(90deg, #a78bfa 0%, #f0abfc 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      #tagline {
+        margin-top: 26px;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: #cbd5e1;
+        max-width: 430px;
+      }
+      .device {
+        flex: 0 0 auto;
+        width: 268px;
+        height: 400px;
+        margin: 0 80px;
+        border-radius: 40px;
+        background: linear-gradient(160deg, #ffffff 0%, #eef2ff 100%);
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+        padding: 22px;
+        display: flex;
+      }
+      .screen {
+        flex: 1;
+        border-radius: 24px;
+        background: #faf9ff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+      }
+      .screen .label {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #8b7fd6;
+      }
+      .screen .count {
+        font-size: 96px;
+        font-weight: 900;
+        color: #1b1736;
+        line-height: 1;
+      }
+      .screen .buttons {
+        display: flex;
+        gap: 14px;
+        margin-top: 6px;
+      }
+      .screen .btn {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: 700;
+      }
+      .screen .minus {
+        background: #ece9fb;
+        color: #6d5dd3;
+      }
+      .screen .plus {
+        background: linear-gradient(135deg, #a78bfa, #7c5cf0);
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="copy">
+      <span id="pill">STORIES</span>
+      <div class="headline">
+        <span id="headline-main">Tap. Count.</span><br />
+        <span id="headline-accent">Repeat.</span>
+      </div>
+      <p id="tagline">The simplest counter on Android.</p>
+    </div>
+    <div class="device">
+      <div class="screen">
+        <div class="label">Stories Counter</div>
+        <div class="count">7</div>
+        <div class="buttons">
+          <div class="btn minus">&minus;</div>
+          <div class="btn plus">+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

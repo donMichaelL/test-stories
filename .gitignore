@@ -21,3 +21,7 @@ keystore.properties
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/play-store-key.json
+
+# Node (creative generators)
+**/node_modules/
+**/package-lock.json
