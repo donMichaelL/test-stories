@@ -31,6 +31,7 @@ jobs:
         run: ./gradlew bundleRelease
 
       - name: Upload R8 mapping to Sentry
+        continue-on-error: true
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_URL: https://de.sentry.io/

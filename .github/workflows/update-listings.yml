@@ -1,9 +1,8 @@
 name: Update Listings
 on:
-  # auto-trigger temporarily disabled — re-enable the push block when ready
-  # push:
-  #   branches: [main]
-  #   paths: ['fastlane/metadata/**']
+  push:
+    branches: [main]
+    paths: ['fastlane/metadata/**']
   workflow_dispatch:
 jobs:
   update:
